@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<LINK REL="stylesheet" TYPE="text/css" href="style.css">
+	<meta charset="UTF-8">
+</head>
+<body bgcolor="#ffc0cb" text="#6495ed" link="808080">
+<style>
+.nof:hover,.shown:hover,.showh:hover,.showa:hover,.send:hover{
+background-color: #4a3046; /* Green */
+color: white;
+}
+.nof{
+border-radius: 10px;
+padding: 16px;
+text-align: right;
+width: 120px;
+}
+.showh{
+border-radius: 10px;
+padding: 16px;
+text-align: right;
+width: 160px;
+}
+.shown{
+border-radius: 10px;
+padding: 16px;
+text-align: right;
+width: 130px;
+}
+.showa{
+border-radius: 10px;
+padding: 16px;
+text-align: right;
+width: 100px;
+}
+.send{
+border-radius: 10px;
+padding: 16px;
+text-align: right;
+width: 120px;
+}
+</style>
+<a name="beginning">сюда можно вернуться</a> <br>
+<script>
+document.write("привет, привет!");
+</script>
+<br>
+количество слов:
+<script>
+function WordCount(str){
+return str.split(' ').length;
+}
+let a = WordCount("привет, привет!");
+document.write(a);
+</script>
+<br>
+URL:
+<script>
+document.write(document.URL);
+</script>
+<br>
+имя файла:
+<script>
+var path = window.location.pathname;
+var page = path.split("/").pop();
+let name = page.split(".");
+document.write(name[0]);
+</script>
+<br>
+расширение файла:
+<script>
+var ending = page.split(".").pop();
+document.write(ending);
+</script>
+<br><br>
+<a href="http://volosylike.ru/pricheski-i-strizhki/kosa-s-puchkom" target="blank">
+Коса с пучком
+</a>
+<br>
+<img src="http://volosylike.ru/images/kosa-s-puchkom.jpg" width="300" height="200" id="kosa">
+<br><br>
+<a href="https://www.news-ontime.ru/novogodniye-pricheski-na-novyy-god/" target="_blank">
+Прически на новый год 
+</a>
+<br>
+<img src="https://i.ytimg.com/vi/YVVGxZx3vDo/maxresdefault.jpg" width="400" height="300" id="newyear" >
+<br> <br>
+количество анкоров:
+<script>
+document.write(document.anchors.length);
+</script>
+<br><br>
+количество ссылок:
+<script>
+document.write(document.links.length);
+</script>
+<br><br>
+количество картинок:
+<script>
+document.write(document.images.length);
+</script>
+<br><br>
+ширина первой картинки:
+<script>
+document.write(document.getElementById("kosa").width)
+</script>
+<br><br>
+ширина самой широкой картинки:
+<script>
+document.write(Math.max(document.getElementById("kosa").width, document.getElementById("newyear").width));
+</script>
+<br><br>
+сумма широт:
+<script>
+document.write(document.getElementById("kosa").width + document.getElementById("newyear").width);
+</script>
+<form id="f1" name="f1">
+мяу: <input type="text" name="hair1"><br>
+мур: <input type="text" name="hair2"><br>
+<input type="button" class="nof" name="noform" onclick="no('f1')" value="сбросить">
+<input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f1').id)" value="принадлежность?">
+<input type="button" class="shown" name='showname' onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+<input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+<input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
+</form><br><br>
+<form id="f2" name="f2">
+мяу: <input type="text" name="hair1"><br>
+мур: <input type="text" name="hair2"><br>
+<input type="button" class="nof" name="noform" onclick="no('f2')" value="сбросить">
+<input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f2').id)" value="принадлежность?">
+<input type="button" class="shown" name='showname'
+onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+<input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+<input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
+</form><br><br>
+<form id="f3" name="f3">
+мяу: <input type="text" name="hair1"><br>
+мур: <input type="text" name="hair2"><br>
+<input type="button" class="nof" name="noform" onclick="no('f3')" value="сбросить">
+<input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f3').id)" value="принадлежность?">
+<input type="button" class="shown" name='showname' onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+<input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+<input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
+</form><br><br>
+<form id="f4" name="f4">
+мяу: <input type="text" name="hair1"><br>
+мур: <input type="text" name="hair2"><br>
+<input type="button" class="nof" name="noform" onclick="no('f4')" value="сбросить">
+<input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f4').id)" value="принадлежность?">
+<input type="button" class="shown" name='showname' onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+<input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+<input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
+</form><br><br>
+<form id="f5" name="f5">
+мяу: <input type="text" name="hair1"><br>
+мур: <input type="text" name="hair2"><br>
+<input type="button" class="nof" name="noform" onclick="no('f5')" value="сбросить">
+<input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f5').id)" value="принадлежность?">
+<input type="button" class="shown" name='showname' onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+<input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+<input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
+</form><br><br>
+<form id="f6" name="f6">
+мяу: <input type="text" name="hair1"><br>
+мур: <input type="text" name="hair2"><br>
+<input type="button" class="nof" name="noform" onclick="no('f6')" value="сбросить">
+<input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f6').id)" value="принадлежность?">
+<input type="button" class="shown" name='showname' onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+<input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+<input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
+</form><br><br>
+<form id="f7" name="f7">
+мяу: <input type="text" name="hair1"><br>
+мур: <input type="text" name="hair2"><br>
+<input type="button" class="nof" name="noform" onclick="no('f7')" value="сбросить">
+<input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f7').id)" value="принадлежность?">
+<input type="button" class="shown" name='showname' onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+<input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+<input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
+</form><br><br>
+<form id="f8" name="f8">
+мяу: <input type="text" name="hair1"><br>
+мур: <input type="text" name="hair2"><br>
+<input type="button" class="nof" name="noform" onclick="no('f8')" value="сбросить">
+<input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f8').id)" value="принадлежность?">
+<input type="button" class="shown" name='showname' onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+<input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+<input type="button" class="showa"
+name="showarea" onclick="alert('2')" value="поля?">
+</form><br><br>
+<form id="f9" name="f9">
+мяу: <input type="text" name="hair1"><br>
+мур: <input type="text" name="hair2"><br>
+<input type="button" class="nof" name="noform" onclick="no('f9')" value="сбросить">
+<input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f9').id)" value="принадлежность?">
+<input type="button" class="shown" name='showname' onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+<input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+<input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
+</form><br><br>
+<form id="f10" name="f10">
+мяу: <input type="text" name="hair1"><br>
+мур: <input type="text" name="hair2"><br>
+<input type="button" class="nof" name="noform" onclick="no('f10')" value="сбросить">
+<input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f10').id)" value="принадлежность?">
+<input type="button" class="shown" name='showname' onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+<input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+<input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
+</form>
+</form>
+<script type="text/javascript">
+document.write(document.getElementById(f2).name)
+function no(f)
+{
+document.getElementById(f).reset();
+}
+</script>
+<br>
+<a href="#beginning">нажми, чтобы вернуться в начало</a><br>
+</body>
+</html>
